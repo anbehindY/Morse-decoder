@@ -13,7 +13,7 @@ puts "\"#{decode_char '.-'}\"" # => "A"
 
 # Method for decoding an entire word in Morse code
 def decode_word(chars)
-  chars.split(' ').map { |char| decode_char(char) }.join
+  chars.split.map { |char| decode_char(char) }.join
 end
 
 puts "\"#{decode_word '-- -.--'}\"" # => "MY"
