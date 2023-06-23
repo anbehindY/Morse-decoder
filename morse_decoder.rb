@@ -17,3 +17,13 @@ def decode_word(chars)
 end
 
 puts "\"#{decode_word '-- -.--'}\"" # => "MY"
+
+# Method for decoding an entire sentence in Morse code
+def decode(chars)
+  chars.split('   ').map { |char| decode_word(char) }.join(' ')
+end
+
+puts "\"#{decode '-- -.--   -. .- -- .'}\"" # => "MY NAME"
+
+puts "\"#{decode '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'}\""
+# => "A BOX FULL OF RUBIES"
